@@ -71,6 +71,16 @@
 				if (this._core.settings.autoplayHoverPause && this._core.is('rotating')) {
 					this.play();
 				}
+			}, this),
+			'translate.owl.carousel': $.proxy(function(e) {
+				if (e.namespace) {
+					this.stop();
+				}
+			}, this),
+			'translated.owl.carousel': $.proxy(function(e) {
+				if (e.namespace) {
+					this.play();
+				}
 			}, this)
 		};
 
